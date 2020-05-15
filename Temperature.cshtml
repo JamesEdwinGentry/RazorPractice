@@ -1,0 +1,29 @@
+﻿@page
+@model Razer_Converter.Pages.TemperatureModel
+@{
+    ViewData["Title"] = "Temperature";
+}
+
+<h1>Temperature</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="TempConversionMethod">Conversion Type</label>
+        <select name="Conversion" class="form-control" id="TempConversionMethod">
+            <option>Fahrenheit to Celsius</option>
+            <option>Fahrenheit to Kelvin</option>
+            <option>Celsius to Fahrenheit</option>
+            <option>Celsius to Kelvin</option>
+            <option>Kelvin to Fahrenheit</option>
+            <option>Kelvin to Celsius</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="AmoutToBeConverted">Temperature To Be Converted</label>
+        <input type="number" name="Amount" class="form-control" id="AmoutToBeConverted" placeholder="0">
+    </div>
+    <button type="submit" class="btn btn-primary">Convert</button>
+</form>
+@Model.Results
+
+
+
